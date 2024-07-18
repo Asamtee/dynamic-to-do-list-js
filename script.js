@@ -10,11 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
     storedTasks.forEach((taskText) => addTask(taskText, false)); // false to prevent saving again to Local Storage
   }
 
-  // Function to add a new task
+  // create addTask function
   function addTask(taskText, save = true) {
     const listItem = document.createElement("li");
     listItem.textContent = taskText;
 
+    //task creation and removal
     const removeButton = document.createElement("button");
     removeButton.textContent = "Remove";
     removeButton.classList.add("remove-btn");
