@@ -44,9 +44,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Add event listener to the Add Task button
-  addButton.addEventListener("click", () => {
+  addButton.addEventListener("click", (addTask) => {
     const taskText = taskInput.value.trim();
     if (taskText === "") {
+      addTask();
       alert("Please enter a task");
       return;
     }
